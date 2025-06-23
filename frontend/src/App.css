@@ -1,38 +1,336 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  margin-top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background:linear-gradient(rgb(166, 159, 255), rgb(214, 214, 214));
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .loginContainer{
+    margin-top: 10px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28em;
+    height: 90vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .input-container1 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 5px;
   }
+
+  .input-container1 input{
+    margin-top: 0px;
+    margin-left: 10px;
+    height: 1.5em;
+    width: 15em;
+    border-radius: 15px;
+    border-width: 15px;
+    border:white;
+    box-shadow: 0 0 6px rgb(166, 159, 255);
+    outline: none;
+    padding:10px;
+    font-size: 10px;
+  }
+
+  .input-container1 button{
+    margin-top:10px;
+  }
+  .input-container1 h3{
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .input-container2 {
+    margin-left: 5px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .input-container2 input{
+    margin-left: 120px;
+    margin-top: 10px;
+    height: 1.5em;
+    width: 15em;
+    border-radius: 15px;
+    border-width: 15px;
+    border:white;
+    box-shadow: 0 0 6px rgb(166, 159, 255);
+    outline: none;
+    padding:10px;
+    font-size: 10px;
+  }
+
+  .input-container2 button{
+    margin-top:10px;
+  }
+   .input-container2 h3{
+    margin-bottom: -10px;
+    text-align: center;
+  }
+
+  .input-container3 {
+    margin-left: 5px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .input-container3 input{
+    margin-top: 0px;
+    height: 1.5em;
+    width: 6em;
+    border-radius: 15px;
+    border-width: 15px;
+    border:white;
+    box-shadow: 0 0 6px rgb(166, 159, 255);
+    outline: none;
+    padding:10px;
+    font-size: 10px;
+    
+  }
+
+  .input-container3 button{
+    margin-top:10px;
+  }
+   .input-container3 h3{
+    text-align: center;
+  }
+
+  .input-container4 {
+    margin-left: 5px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .input-container4 input{
+    margin-top: 0px;
+    height: 1.5em;
+    width: 7em;
+    border-radius: 15px;
+    border-width: 15px;
+    border:white;
+    box-shadow: 0 0 6px rgb(166, 159, 255);
+    outline: none;
+    padding:10px;
+    font-size: 10px;
+  }
+
+  .input-container4 button{
+    margin-top:10px;
+  }
+
+  
+  
+  
+  
+  .loginContainer2{
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30em;
+    height: 60vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+  }
+  
+  
+
+  .div1{
+    margin-top: -30px;
+  }
+
+  .div2{
+    margin-top: -30px;
+  }
+  
+  
+  input:focus{   
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 16px rgb(125, 115, 255);
+    outline: 0 none;
+  }
+  .rewardCheck{
+    margin-top: -10px;
+    margin-right: 0px;
+  }
+  .rewardCheck input{
+    height: 1.5em;
+    width: 15em;
+    border-radius: 15px;
+    border-width: 15px;
+    border:white;
+    box-shadow: 0 0 6px rgb(166, 159, 255);
+    outline: none;
+    padding:10px;
+    font-size: 10px;
+  }
+  a{
+    color: rgb(0, 68, 255);
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-left: -180px;
+  }
+
+  .checkUSDC{
+    height: 5em;
+    width: 16em;
+    margin: 10px;
+    margin-top: 25px;
+    border-radius: 15px;
+    background:linear-gradient(rgb(124, 114, 255), rgb(255, 116, 116));
+    border: none;
+    transition: all .2s ease-in-out;
+  }
+
+  .checkUSDC:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgb(199, 199, 199);
+  }
+
+  .checkUSDC p{
+    color:white;
+    font-size: 20px;
+    margin-top: 13px;
+  }
+
+  .withUSDC{
+    height: 5em;
+    width: 16em;
+    margin: 10px;
+    margin-top: 25px;
+    border-radius: 15px;
+    background:linear-gradient(rgb(124, 114, 255), rgb(255, 116, 116));
+    border: none;
+    transition: all .2s ease-in-out;
+  }
+
+  .withUSDC:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgb(199, 199, 199);
+  }
+
+  .withUSDC p{
+    color:white;
+    font-size: 20px;
+    margin-top: 13px;
+  }
+
+  .stakeBut {
+    height: 4em;
+    width: 25em;
+    margin: 10px;
+    margin-top: 25px;
+    border-radius: 15px;
+    background:linear-gradient(rgb(124, 114, 255), rgb(255, 116, 116));
+    border: none;
+    transition: all .2s ease-in-out;
+  }
+
+  .stakeBut:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgb(199, 199, 199);
+  }
+
+  .stakeBut p{
+    color:white;
+    font-size: 20px;
+    margin-top: 13px;
+  }
+
+  .CheckBut1{
+    height: 4em;
+    width: 8em;
+    margin: 2px;
+    margin-top: 30px;
+    margin-left: 20px;
+    border-radius: 15px;
+    background:linear-gradient(rgb(149, 98, 220), rgb(103, 104, 104));
+    border: none;
+    transition: all .2s ease-in-out;
+  }
+  .CheckBut1 p{
+    color:white;
+    font-size: 14px;
+    margin-top: 10px;
 }
+.CheckBut1:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgb(199, 199, 199);
+  }
+
+  
+  .WithdrawBut p{
+        color:white;
+        font-size: 16px;
+        margin-top: 16px;
+  }
+  .WithdrawBut:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgb(199, 199, 199);
+  }
+
+  .claimBut{
+    height: 60px;
+    width: 25em;
+    margin: 0px;
+    margin-top: 20px;
+    margin-left: 35px;
+    border-radius: 50px;
+    background:linear-gradient(rgb(32, 203, 209), rgb(103, 104, 104));
+    border: none;
+    transition: all .2s ease-in-out;
+  }
+  .claimBut p{
+    color:white;
+    font-size: 20px;
+    margin-top: 14px;
+}
+.claimBut:hover{
+transform: scale(1.1);
+box-shadow: 0 0 12px rgb(199, 199, 199);
+}
+  
+  
+  .siG{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:18px;
+    height: 4em;
+    width: 24em;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(152, 145, 255);
+    border-width: 3px;
+    border-style: dashed;
+    transition: all .2s ease-in-out;
+  }
+  .siG:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgb(199, 199, 199);
+    cursor: pointer;
+  }
+  .siG p{
+    font-size: 20px;
+  }
+
+  .loginContainer h5{
+    font-size: 10px;
+    color: red;
+  }
