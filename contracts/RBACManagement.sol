@@ -19,7 +19,7 @@ contract RBACManager is AccessControl{
 
     mapping(uint256 => Event) eventList;     // event list that will store all the events created by the EDITOR_ROLE
     mapping(address=>mapping(uint256=>bool)) seatBooked;  //shows whether an address has booked a seat for particular event or not
-    uint256 eventNumber;         // number represents the unique eventId
+    uint256 public eventNumber;         // number represents the unique eventId
 
     bytes32 public constant EDITOR_ROLE= keccak256("EDITOR_ROLE");
     bytes32 public constant VIEWER_ROLE= keccak256("VIEWER_ROLE");
@@ -56,6 +56,7 @@ contract RBACManager is AccessControl{
 
 // function for the EDITOR_ROLE to edit the event details that is already registered
     function editEvent(uint256 _eventId,string memory _eventName, uint256 _eventTime, uint256 _endTime, uint256 _totalParticipants) public onlyRole(EDITOR_ROLE){
+        require(_eventId<eventNumber,"Please enter a valid eventId before checking the event details");
         require(block.timestamp<=eventList[_eventId].eventTime,"You have to edit the event details before the event start");
         require(_eventTime>=block.timestamp + 2 days,"You need to register the event at least 2 days before the event");
         require(_endTime>_eventTime,"Endtime must be greater than event start time");
@@ -63,6 +64,7 @@ contract RBACManager is AccessControl{
         eventList[_eventId].eventTime=_eventTime;
         eventList[_eventId].endTime=_endTime;
         eventList[_eventId].totalParticipants=_totalParticipants;
+        eventList[_eventId].seatsLeft=_totalParticipants;
         eventList[_eventId].completed=false;
 
     }
@@ -70,7 +72,7 @@ contract RBACManager is AccessControl{
 // function for the EDITOR_ROLE to mark a particular event as completed
     function markEventAsCompleted(uint256 _eventId) public onlyRole(EDITOR_ROLE){
         require(!eventList[_eventId].completed,"This event has already been completed.");
-        require(block.timestamp>=eventList[_eventId].endTime,"Sorry, the event is not completed yet");
+        require(block.timestamp>=eventList[_eventId].eventTime,"Sorry, the event has not started yet");
         eventList[_eventId].completed=true;
     }
 
