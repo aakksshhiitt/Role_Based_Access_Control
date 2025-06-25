@@ -29,7 +29,7 @@ function App() {
      const initializer=async()=>{
 
 		
-    contractAddress="0xc9D249847781606169b3FEadbB0114444FeaF76A";
+    contractAddress="0xc65062b692258b824242e64e30E9FAf2Aa4468D8";
     abi=[
 	{
 		"inputs": [],
@@ -56,120 +56,6 @@ function App() {
 		],
 		"name": "AccessControlUnauthorizedAccount",
 		"type": "error"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "bytes32",
-				"name": "role",
-				"type": "bytes32"
-			},
-			{
-				"indexed": true,
-				"internalType": "bytes32",
-				"name": "previousAdminRole",
-				"type": "bytes32"
-			},
-			{
-				"indexed": true,
-				"internalType": "bytes32",
-				"name": "newAdminRole",
-				"type": "bytes32"
-			}
-		],
-		"name": "RoleAdminChanged",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "bytes32",
-				"name": "role",
-				"type": "bytes32"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "account",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "sender",
-				"type": "address"
-			}
-		],
-		"name": "RoleGranted",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "bytes32",
-				"name": "role",
-				"type": "bytes32"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "account",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "sender",
-				"type": "address"
-			}
-		],
-		"name": "RoleRevoked",
-		"type": "event"
-	},
-	{
-		"inputs": [],
-		"name": "DEFAULT_ADMIN_ROLE",
-		"outputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "EDITOR_ROLE",
-		"outputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "VIEWER_ROLE",
-		"outputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
 	},
 	{
 		"inputs": [
@@ -278,25 +164,6 @@ function App() {
 	{
 		"inputs": [
 			{
-				"internalType": "bytes32",
-				"name": "role",
-				"type": "bytes32"
-			}
-		],
-		"name": "getRoleAdmin",
-		"outputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
 				"internalType": "address",
 				"name": "user",
 				"type": "address"
@@ -342,30 +209,6 @@ function App() {
 		"name": "grantViewerRole",
 		"outputs": [],
 		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bytes32",
-				"name": "role",
-				"type": "bytes32"
-			},
-			{
-				"internalType": "address",
-				"name": "account",
-				"type": "address"
-			}
-		],
-		"name": "hasRole",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -418,6 +261,163 @@ function App() {
 		"type": "function"
 	},
 	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "role",
+				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "previousAdminRole",
+				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "newAdminRole",
+				"type": "bytes32"
+			}
+		],
+		"name": "RoleAdminChanged",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "role",
+				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "sender",
+				"type": "address"
+			}
+		],
+		"name": "RoleGranted",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "role",
+				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "sender",
+				"type": "address"
+			}
+		],
+		"name": "RoleRevoked",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "DEFAULT_ADMIN_ROLE",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "EDITOR_ROLE",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "eventNumber",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "role",
+				"type": "bytes32"
+			}
+		],
+		"name": "getRoleAdmin",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "role",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			}
+		],
+		"name": "hasRole",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "bytes4",
@@ -431,6 +431,19 @@ function App() {
 				"internalType": "bool",
 				"name": "",
 				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "VIEWER_ROLE",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
 			}
 		],
 		"stateMutability": "view",
@@ -492,7 +505,7 @@ function App() {
 		"stateMutability": "view",
 		"type": "function"
 	}
-    ];
+]
 
 
 	if (!window.ethereum) {
@@ -583,8 +596,16 @@ function App() {
 	
 		  }
 		  catch(err){
-			document.getElementsByClassName("errorText1")[0].innerHTML=(err.reason);
-		  }
+			if(err.code === "CALL_EXCEPTION" && err.reason === null){
+				document.getElementsByClassName("errorText3")[0].innerHTML=("You may not have the required role");
+			}
+			else if(err.code === "CALL_EXCEPTION" && err.reason){
+			    document.getElementsByClassName("errorText3")[0].innerHTML=(err.reason);
+			}
+			else{
+				document.getElementsByClassName("errorText3")[0].innerHTML=(err.info.error.message);
+			}
+		}
   }
 
   const grantEditorRole=async()=>{
@@ -652,16 +673,11 @@ function App() {
 			else{
 				document.getElementsByClassName("errorText2")[0].innerHTML=(err.info.error.message);
 			}
+			// console.log(err);
 		}
 	};
 
   const editEvent=async()=>{
-
-	// const eventNumber=await contractSigner.eventNumber();
-	// if(eventId>=eventNumber){
-	// 	console.log("Please enter correct eventId");
-	// 	return;
-	// }
 
 	if(name==undefined || startDate==undefined || endDate==undefined || totalParticipants==undefined){
 		document.getElementsByClassName("errorText2")[0].innerHTML=("Please enter the valid details first");
@@ -689,7 +705,7 @@ function App() {
 
   const completed=async()=>{
 	try{
-			if(eventId<1 || eventId==undefined){
+			if(eventId<1 || eventId==undefined || eventId==""){
 				document.getElementsByClassName("errorText2")[0].innerHTML=("please enter valid details");
 			}
 			else{
@@ -713,7 +729,7 @@ function App() {
   const showDetails=async()=>{
 	try{
 
-			if(eventId==undefined){
+			if(eventId==undefined || eventId==""){
 				document.getElementsByClassName("errorText3")[0].innerHTML=("Refresh the page and enter a valid Event Id");
 				return;
 			}
@@ -785,12 +801,12 @@ function App() {
 
         <div className="input-container2">
           <div className="div2">
-            <h3>Grant Viewer Role Role</h3>
+            <h3>Grant Viewer Role </h3>
             <input type="text" name="uname" placeholder="Enter User Address" onChange={handleChange4} required /> &nbsp; &nbsp;
           <button className="stakeBut" onClick={grantViewerRole}><p>Grant Viewer Role</p></button>
           </div>
         </div>
-		<h5 className='errorText1'></h5>
+		<h4 className='errorText1'></h4>
   </div>
 
 
@@ -810,7 +826,7 @@ function App() {
 
         <div className="input-container3">
           <div className="div2">
-            <h3>change event details</h3>
+            <h3>Change event details</h3>
 			<input type="text" name="uname" placeholder="id"  onChange={handleChange9} required />
             <input type="text" name="uname" placeholder="name"  onChange={handleChange5} required /> &nbsp;
             <input type="text" name="uname" placeholder="start date" onChange={handleChange6}  required />&nbsp;
@@ -820,14 +836,14 @@ function App() {
           </div>
         </div>
 
-        <div className="input-container3">
+        <div className="input-container5">
           <div className="div2">
             <h3>Mark Event as Completed</h3>
             <input type="text" name="uname" placeholder="event id" onChange={handleChange9} required /> &nbsp;<br></br>
           <button className="stakeBut" onClick={completed}><p>Completed</p></button>
           </div>
         </div>
-		<h5 className='errorText2'></h5>
+		<h4 className='errorText2'></h4>
       </div>
 
       <div className="loginContainer">
@@ -847,7 +863,7 @@ function App() {
             <button className="stakeBut" onClick={book}><p>Book</p></button>
           </div>
         </div>
-		<h5 className='errorText3'></h5>
+		<h4 className='errorText3'></h4>
       </div>
     </div>
   </div>
